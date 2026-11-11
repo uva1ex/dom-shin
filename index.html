@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#c2410c">
 <title>Дом шин — Саратов</title>
-<meta name="description" content="Диагностика бесплатно, запчасти в наличии, гарантия на работы.">
+<meta name="description" content="Три филиала, установка в день обращения и честные цены на комплексный сервис">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="Дом шин">
-<meta property="og:title" content="Дом шин: ремонт авто без сюрпризов">
-<meta property="og:description" content="Диагностика бесплатно, запчасти в наличии, гарантия на работы.">
-<meta property="og:image" content="https://ams2-cdn.2gis.com/previews/1161267609451102211/091a4833-ee48-479e-bc27-38646548a6bb/3/ru/656x340?api-version=2.0">
+<meta property="og:title" content="Шины, диски и развал-схождение в Саратове">
+<meta property="og:description" content="Три филиала, установка в день обращения и честные цены на комплексный сервис">
+<meta property="og:image" content="https://i4.photo.2gis.com/photo-gallery/b3a90e3c-9501-455d-8d45-ecb5898e1720.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2216%22%20fill%3D%22%23c2410c%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2243%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2226%22%20font-weight%3D%22700%22%20fill%3D%22%23fff%22%20text-anchor%3D%22middle%22%3E%D0%94%D0%A8%3C%2Ftext%3E%3C%2Fsvg%3E">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Дом шин",
-  "description": "Диагностика бесплатно, запчасти в наличии, гарантия на работы.",
+  "description": "Три филиала, установка в день обращения и честные цены на комплексный сервис",
   "telephone": "+79042442442",
-  "image": "https://ams2-cdn.2gis.com/previews/1161267609451102211/091a4833-ee48-479e-bc27-38646548a6bb/3/ru/656x340?api-version=2.0",
+  "image": "https://i4.photo.2gis.com/photo-gallery/b3a90e3c-9501-455d-8d45-ecb5898e1720.jpg",
   "url": "https://2gis.ru/saratov/firm/70000001109976580",
   "areaServed": "Саратов",
   "address": {
@@ -34,21 +34,7 @@
       "@type": "Offer",
       "itemOffered": {
         "@type": "Service",
-        "name": "Компьютерная диагностика"
-      }
-    },
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Замена масла"
-      }
-    },
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Тормозная система"
+        "name": "Шиномонтаж"
       }
     },
     {
@@ -56,6 +42,27 @@
       "itemOffered": {
         "@type": "Service",
         "name": "Развал-схождение"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Правка дисков"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Комплексное обслуживание"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Сезонное хранение шин"
       }
     }
   ]
@@ -329,7 +336,8 @@
   /* ---------- галерея ---------- */
   .gallery {
     display: grid; gap: 12px;
-    grid-template-columns: repeat(3, 1fr); grid-auto-rows: 260px;
+    /* auto-fit: при 7 фото выходит 4+3, без одинокого кадра в последнем ряду. */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); grid-auto-rows: 220px;
   }
   .gallery button {
     position: relative; padding: 0; border: 0; border-radius: 16px; overflow: hidden;
@@ -572,6 +580,51 @@
   .theme-dark .faq summary { color: var(--ink); }
   .theme-dark .footer-bottom { border-top: 1px solid var(--line); }
   .theme-dark .site-footer { background: var(--footer-bg); }
+
+  /* ---------- каталог товаров ---------- */
+  .catalog-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .product-card {
+    display: flex; flex-direction: column; gap: 8px; padding: 24px;
+    border-radius: var(--radius); background: var(--card);
+    border: 1px solid var(--line); box-shadow: var(--shadow-sm);
+    transition: transform .22s ease, box-shadow .22s ease;
+  }
+  .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .product-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+  .product-group {
+    padding: 5px 10px; border-radius: 100px; background: var(--accent-soft);
+    color: var(--accent-dark); font-size: 11.5px; font-weight: 700;
+    letter-spacing: .08em; text-transform: uppercase;
+  }
+  .product-num { font-size: 12px; font-weight: 700; color: var(--muted); }
+  .product-card h3 { font-size: 18px; margin-top: 4px; }
+  .product-card p { color: var(--muted); font-size: 14px; }
+  .product-footer {
+    margin-top: auto; padding-top: 16px; display: flex; align-items: center;
+    justify-content: space-between; gap: 10px; flex-wrap: wrap;
+  }
+  .product-price { font-size: 21px; font-weight: 800; letter-spacing: -.02em; }
+  .product-link {
+    font-size: 13.5px; font-weight: 650; color: var(--accent-dark); text-decoration: none;
+    border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  }
+  .product-link:hover { border-color: var(--accent); }
+
+  /* ---------- отзывы ---------- */
+  .reviews-panel { display: grid; gap: 18px; }
+  .reviews-summary {
+    display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+    padding: 26px; border-radius: 20px; background: var(--card);
+    border: 1px solid var(--line); box-shadow: var(--shadow-sm);
+  }
+  .reviews-score { font-size: 44px; font-weight: 800; line-height: 1; letter-spacing: -.03em; }
+  .reviews-meta { display: grid; gap: 4px; font-size: 14px; color: var(--muted); }
+  .reviews-stars { color: #f5a623; font-size: 18px; letter-spacing: 2px; }
+  .reviews-actions { margin-left: auto; }
+  .reviews-widget { border-radius: 20px; overflow: hidden; border: 1px solid var(--line); background: var(--card); }
+  .reviews-widget iframe { display: block; width: 100%; height: 420px; border: 0; }
+  .reviews-link { display: inline-block; margin-top: 12px; font-size: 14.5px; font-weight: 600; color: var(--accent-dark); text-decoration: none; }
+  .reviews-link:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -589,6 +642,7 @@
 
     <nav class="nav" aria-label="Основная навигация">
       <a href="#services">Услуги и цены</a>
+      <a href="#catalog">Каталог</a>
       <a href="#why">Почему мы</a>
       <a href="#gallery">Фотогалерея</a>
       <a href="#faq">Вопросы</a>
@@ -612,6 +666,7 @@
   <div class="wrap">
     <nav aria-label="Мобильная навигация">
       <a href="#services">Услуги и цены</a>
+      <a href="#catalog">Каталог</a>
       <a href="#why">Почему мы</a>
       <a href="#gallery">Фотогалерея</a>
       <a href="#faq">Вопросы</a>
@@ -626,9 +681,9 @@
   <section class="hero" aria-labelledby="hero-title">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <span class="eyebrow"><span class="dot"></span>Автосервис</span>
-        <h1 id="hero-title">Дом шин: ремонт авто без сюрпризов</h1>
-        <p class="hero-lead">Диагностика бесплатно, запчасти в наличии, гарантия на работы.</p>
+        <span class="eyebrow"><span class="dot"></span>Шины и сервис в Саратове</span>
+        <h1 id="hero-title">Шины, диски и развал-схождение в Саратове</h1>
+        <p class="hero-lead">Три филиала, установка в день обращения и честные цены на комплексный сервис</p>
 
         <div class="hero-actions">
           <a class="btn btn-primary btn-lg" href="#contacts">Записаться</a>
@@ -644,7 +699,7 @@
       </div>
 
       <figure class="hero-media" aria-label="Фото">
-        <img src="https://ams2-cdn.2gis.com/previews/1161267609451102211/091a4833-ee48-479e-bc27-38646548a6bb/3/ru/656x340?api-version=2.0" alt="Дом шин" referrerpolicy="no-referrer" loading="eager" fetchpriority="high" decoding="async" onerror="this.parentElement.style.display='none'">
+        <img src="https://i4.photo.2gis.com/photo-gallery/b3a90e3c-9501-455d-8d45-ecb5898e1720.jpg" alt="Дом шин" referrerpolicy="no-referrer" loading="eager" fetchpriority="high" decoding="async" onerror="this.parentElement.style.display='none'">
         <div class="badge-float" aria-hidden="true"><strong>12 месяцев</strong><span>гарантия на работы</span></div>
       </figure>
     </div>
@@ -661,33 +716,99 @@
       <div class="services-grid">
         <article class="service-card reveal">
           <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M7 21h10"/><path d="M12 17v4"/><path d="m8 11 2 2 4-4"/></svg></span>
-          <h3>Компьютерная диагностика</h3>
-          <p>Находим причину за 30 минут</p>
-          <div class="service-price">от 500 ₽</div>
-        </article>
-        <article class="service-card reveal">
-          <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></span>
-          <h3>Замена масла</h3>
-          <p>Своё или наше масло, 40 минут</p>
-          <div class="service-price">от 700 ₽</div>
-        </article>
-        <article class="service-card reveal">
-          <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16h16"/><path d="M6 16V9h9l3 4h1v3"/><circle cx="8" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
-          <h3>Тормозная система</h3>
-          <p>Колодки, диски, суппорты</p>
+          <h3>Шиномонтаж</h3>
+          <p>снятие, установка и балансировка колёс</p>
           <div class="service-price">от 1 500 ₽</div>
         </article>
         <article class="service-card reveal">
-          <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 8h14"/><circle cx="12" cy="12" r="9"/><path d="m8 16 8-8"/></svg></span>
+          <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></span>
           <h3>Развал-схождение</h3>
-          <p>3D-стенд, точная настройка</p>
-          <div class="service-price">от 1 800 ₽</div>
+          <p>регулировка углов установки колёс</p>
+          <div class="service-price">от 2 000 ₽</div>
+        </article>
+        <article class="service-card reveal">
+          <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16h16"/><path d="M6 16V9h9l3 4h1v3"/><circle cx="8" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+          <h3>Правка дисков</h3>
+          <p>восстановление геометрии литых и стальных дисков</p>
+          <div class="service-price">по запросу</div>
+        </article>
+        <article class="service-card reveal">
+          <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 8h14"/><circle cx="12" cy="12" r="9"/><path d="m8 16 8-8"/></svg></span>
+          <h3>Комплексное обслуживание</h3>
+          <p>плановый сервис и мелкий ремонт автомобиля</p>
+          <div class="service-price">по запросу</div>
+        </article>
+        <article class="service-card reveal">
+          <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M7 21h10"/><path d="M12 17v4"/><path d="m8 11 2 2 4-4"/></svg></span>
+          <h3>Сезонное хранение шин</h3>
+          <p>хранение комплекта колёс между сезонами</p>
+          <div class="service-price">по запросу</div>
         </article>
       </div>
       <p class="services-note">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
         Нужна услуга, которой нет в списке? Позвоните — подскажем, делаем ли и сколько будет стоить.
       </p>
+    </div>
+  </section>
+
+  <section class="section" id="catalog" aria-labelledby="catalog-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-tag">Каталог</span>
+        <h2 id="catalog-title">Шины и диски в наличии</h2>
+        <p class="section-sub">Цены и наличие уточняйте по телефону или при записи</p>
+      </div>
+      <div class="catalog-grid">
+        <article class="product-card reveal">
+          <div class="product-head">
+            <span class="product-group">Летние шины</span>
+            <span class="product-num">01</span>
+          </div>
+          <h3>Летние шины R15–R17</h3>
+          <p>популярные размеры для легковых авто</p>
+          <div class="product-footer">
+            <span class="product-price">от 5 900 ₽</span>
+            <a class="product-link" href="#contacts">Уточнить наличие</a>
+          </div>
+        </article>
+        <article class="product-card reveal">
+          <div class="product-head">
+            <span class="product-group">Зимние шины</span>
+            <span class="product-num">02</span>
+          </div>
+          <h3>Зимние шины R15–R17</h3>
+          <p>шипованные и нешипованные модели</p>
+          <div class="product-footer">
+            <span class="product-price">от 6 900 ₽</span>
+            <a class="product-link" href="#contacts">Уточнить наличие</a>
+          </div>
+        </article>
+        <article class="product-card reveal">
+          <div class="product-head">
+            <span class="product-group">Диски</span>
+            <span class="product-num">03</span>
+          </div>
+          <h3>Литые диски</h3>
+          <p>размеры под распространённые модели</p>
+          <div class="product-footer">
+            <span class="product-price">от 7 500 ₽</span>
+            <a class="product-link" href="#contacts">Уточнить наличие</a>
+          </div>
+        </article>
+        <article class="product-card reveal">
+          <div class="product-head">
+            <span class="product-group">Диски</span>
+            <span class="product-num">04</span>
+          </div>
+          <h3>Стальные диски</h3>
+          <p>штатные размеры для зимнего комплекта</p>
+          <div class="product-footer">
+            <span class="product-price">от 3 500 ₽</span>
+            <a class="product-link" href="#contacts">Уточнить наличие</a>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -755,14 +876,46 @@
       </div>
       <div class="gallery" id="gallery-grid">
         <button type="button" aria-label="Открыть фото 1">
-          <img src="https://ams2-cdn.2gis.com/previews/1161267609451102211/091a4833-ee48-479e-bc27-38646548a6bb/3/ru/656x340?api-version=2.0" alt="Дом шин — фото 1" referrerpolicy="no-referrer" loading="lazy" decoding="async" onerror="this.closest('button').style.display='none'">
+          <img src="https://i4.photo.2gis.com/photo-gallery/b3a90e3c-9501-455d-8d45-ecb5898e1720_656x340.jpg" data-full="https://i4.photo.2gis.com/photo-gallery/b3a90e3c-9501-455d-8d45-ecb5898e1720.jpg" alt="Дом шин — фото 1" referrerpolicy="no-referrer" loading="lazy" decoding="async" onerror="this.closest('button').style.display='none'">
         </button>
         <button type="button" aria-label="Открыть фото 2">
-          <img src="https://i4.photo.2gis.com/photo-gallery/b3a90e3c-9501-455d-8d45-ecb5898e1720_656x340.jpg" alt="Дом шин — фото 2" referrerpolicy="no-referrer" loading="lazy" decoding="async" onerror="this.closest('button').style.display='none'">
+          <img src="https://i0.photo.2gis.com/photo-gallery/bb2f80a0-33f3-4d1b-9f60-9aad066d5ce3_656x340.jpg" data-full="https://i0.photo.2gis.com/photo-gallery/bb2f80a0-33f3-4d1b-9f60-9aad066d5ce3.jpg" alt="Дом шин — фото 2" referrerpolicy="no-referrer" loading="lazy" decoding="async" onerror="this.closest('button').style.display='none'">
         </button>
         <button type="button" aria-label="Открыть фото 3">
-          <img src="https://i6.photo.2gis.com/images/geo/43/6051712033207542_5728_328x170.jpg" alt="Дом шин — фото 3" referrerpolicy="no-referrer" loading="lazy" decoding="async" onerror="this.closest('button').style.display='none'">
+          <img src="https://i6.photo.2gis.com/photo-gallery/af1602c7-128f-43eb-83b9-8735f9e019e8_656x340.jpg" data-full="https://i6.photo.2gis.com/photo-gallery/af1602c7-128f-43eb-83b9-8735f9e019e8.jpg" alt="Дом шин — фото 3" referrerpolicy="no-referrer" loading="lazy" decoding="async" onerror="this.closest('button').style.display='none'">
         </button>
+        <button type="button" aria-label="Открыть фото 4">
+          <img src="https://i4.photo.2gis.com/photo-gallery/e6b33082-e51b-4a44-9c1d-6092b1b47f82_656x340.jpg" data-full="https://i4.photo.2gis.com/photo-gallery/e6b33082-e51b-4a44-9c1d-6092b1b47f82.jpg" alt="Дом шин — фото 4" referrerpolicy="no-referrer" loading="lazy" decoding="async" onerror="this.closest('button').style.display='none'">
+        </button>
+        <button type="button" aria-label="Открыть фото 5">
+          <img src="https://i1.photo.2gis.com/photo-gallery/e757e3b7-14a1-4a5b-a528-7c7fa39bab74_656x340.jpg" data-full="https://i1.photo.2gis.com/photo-gallery/e757e3b7-14a1-4a5b-a528-7c7fa39bab74.jpg" alt="Дом шин — фото 5" referrerpolicy="no-referrer" loading="lazy" decoding="async" onerror="this.closest('button').style.display='none'">
+        </button>
+        <button type="button" aria-label="Открыть фото 6">
+          <img src="https://i0.photo.2gis.com/photo-gallery/270db88b-988c-4244-9544-ffe77692d552_656x340.jpg" data-full="https://i0.photo.2gis.com/photo-gallery/270db88b-988c-4244-9544-ffe77692d552.jpg" alt="Дом шин — фото 6" referrerpolicy="no-referrer" loading="lazy" decoding="async" onerror="this.closest('button').style.display='none'">
+        </button>
+        <button type="button" aria-label="Открыть фото 7">
+          <img src="https://i0.photo.2gis.com/photo-gallery/c647a746-2996-48ac-9a1a-72dd6711b281_656x340.jpg" data-full="https://i0.photo.2gis.com/photo-gallery/c647a746-2996-48ac-9a1a-72dd6711b281.jpg" alt="Дом шин — фото 7" referrerpolicy="no-referrer" loading="lazy" decoding="async" onerror="this.closest('button').style.display='none'">
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="reviews" aria-labelledby="reviews-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-tag">Отзывы</span>
+        <h2 id="reviews-title">Что говорят клиенты</h2>
+      </div>
+      <div class="reviews-panel">
+        <div class="reviews-summary">
+          <div class="reviews-score">5,0</div>
+          <div class="reviews-meta">
+            <span class="reviews-stars" aria-hidden="true">★★★★★</span>
+            <span>7 оценок в 2ГИС</span>
+          </div>
+          <a class="btn btn-ghost reviews-actions" href="https://2gis.ru/saratov/firm/70000001109976580" target="_blank" rel="noopener noreferrer">Смотреть отзывы</a>
+        </div>
+        
       </div>
     </div>
   </section>
@@ -850,7 +1003,7 @@
             <div class="field">
               <label for="service">Что нужно сделать</label>
               <select id="service" name="service">
-                <option>Компьютерная диагностика</option><option>Замена масла</option><option>Тормозная система</option><option>Развал-схождение</option>
+                <option>Шиномонтаж</option><option>Развал-схождение</option><option>Правка дисков</option><option>Комплексное обслуживание</option><option>Сезонное хранение шин</option>
                 <option>Другое — расскажу по телефону</option>
               </select>
             </div>
@@ -888,12 +1041,12 @@
             <span class="brand-caption" style="color:#8b94a3">автосервис · Саратов</span>
           </span>
         </a>
-        <p>Диагностика бесплатно, запчасти в наличии, гарантия на работы.</p>
+        <p>Три филиала, установка в день обращения и честные цены на комплексный сервис</p>
       </div>
 
       <div class="footer-col">
         <h4>Услуги</h4>
-        <ul><li><a href="#services">Компьютерная диагностика</a></li><li><a href="#services">Замена масла</a></li><li><a href="#services">Тормозная система</a></li><li><a href="#services">Развал-схождение</a></li></ul>
+        <ul><li><a href="#services">Шиномонтаж</a></li><li><a href="#services">Развал-схождение</a></li><li><a href="#services">Правка дисков</a></li><li><a href="#services">Комплексное обслуживание</a></li></ul>
       </div>
 
       <div class="footer-col">
@@ -1004,7 +1157,7 @@
   var renderLightbox = function () {
     if (!shown.length) return;
     var img = shown[current].querySelector("img");
-    lightboxImg.src = img.src;
+    lightboxImg.src = img.getAttribute("data-full") || img.src;
     lightboxImg.alt = img.alt || "";
   };
   var closeLightbox = function () {
